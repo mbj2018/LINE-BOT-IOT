@@ -60,5 +60,6 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo $text;
+//echo $text;
+echo "Heroku";
 ?>
