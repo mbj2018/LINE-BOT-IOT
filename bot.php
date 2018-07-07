@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
                         //if($text=="สวัสดี"){
 			if(strstr($text,"สวัส") || strstr($text,"จ่า")){
 			// Build message to reply back
-				echo $text;
+				echo "hero";
 			$messages = [
 				'type' => 'text',
 				'text' => "จ่าเฉยยินดีรับใช้ครับ"
