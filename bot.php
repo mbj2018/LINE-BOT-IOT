@@ -61,6 +61,6 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo $msg;
+echo $text;
 
 ?>
