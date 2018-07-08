@@ -8,7 +8,7 @@ $content = file_get_contents('php://input');
 $access_token = 'vIqVV9lNX5yNkf7r4nm+FFAesNeaypSuYC/OOW9LOiRptDrt0/ELtOJekuhmabamyn5ssrtDODisO/XE2wvauE7MTr1C0xIY84aHbRZRQDRtEojxs7UtkvssK7Y4eS4Xj/r+krB7u9ueoZVAjmOvMwdB04t89/1O/w1cDnyilFU=';
 //$Gid ='Cbba671d3c1043d9d231a951b25edc69b';
 $events = json_decode($content, true);
-$text = $event['message']['text'];
+$HerokuMsg;
 // Validate parsed JSON data
 if (!is_null($events['ESP'])) {
 	
@@ -37,6 +37,7 @@ if (!is_null($events['events'])) {
 		
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
                         //if($text=="สวัสดี"){
+			$HerokuMsg = $text;
 			if(strstr($text,"สวัส") || strstr($text,"จ่า")){
 			// Build message to reply back
 				
@@ -63,6 +64,6 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo $text;
+echo $HerokuMsg;
 
 ?>
