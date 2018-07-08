@@ -1,7 +1,7 @@
 <?php
  require("pub.php");
  require("line.php");
-
+$text = $event['message']['text'];
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			//$text = $event['message']['text'];
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
