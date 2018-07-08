@@ -15,7 +15,7 @@ if (!is_null($events['ESP'])) {
 	send_LINE($events['ESP']);// เรียกฟังชั่นที่ Line.php
 		
 	echo "OK";
-	echo $HerokuMsg;
+	echo $events;
 	}
 if (!is_null($events['events'])) {
 	echo "line bot";
