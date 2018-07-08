@@ -15,7 +15,7 @@ if (!is_null($events['ESP'])) {
 	send_LINE($events['ESP']);// เรียกฟังชั่นที่ Line.php
 		
 	echo "OK";
-	echo $events;
+	//echo $events;
 	}
 if (!is_null($events['events'])) {
 	echo "line bot";
@@ -31,6 +31,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$Topic = "NodeMCU1" ;
 			getMqttfromlineMsg($Topic,$text);//เรียกฟังชั่นที่ pub.php
+			echo $text;
 			// Make a POST Request to Messaging API to reply to sender
 			
 
