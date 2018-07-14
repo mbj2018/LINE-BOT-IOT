@@ -1,7 +1,7 @@
 <?php
 //include 'headbot.php';
 // Function Return message
-function send_LINELottery(){
+
 function t1($tt1)
 {
 	$messages = [
