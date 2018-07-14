@@ -1,6 +1,7 @@
 <?php
  require("pub.php");
  require("line.php");
+ require("Line-Lottery.php);
 send_LINELottery();
 // Get POST body content
 $content = file_get_contents('php://input');
