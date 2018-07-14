@@ -45,5 +45,4 @@ if (!is_null($StrGet)) {
 	echo $result . "\r\n";	
 	echo $StrGet;
 }
-}
 ?>
