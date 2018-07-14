@@ -78,17 +78,8 @@ function t1($tt1)
 $Accesstoken =$_GET["accesstoken"];
 $Gid =$_GET["gid"];
 $StrGet = $_GET["strget"];
-//$StrGet = 'TEST';
-//$messagesToken = t1($A_Token);
-//$text = $StrGet;
-//$PyGroupid =$_GET["Group_ID"];
-//$text = "Test";
-	 
-//if (!is_null($text))
+
 if (!is_null($StrGet)) {
-//if (!empty($_POST)){
-	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
-	//$messages = t1($text);
 	$messages = t1($StrGet);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
@@ -98,7 +89,6 @@ if (!is_null($StrGet)) {
 		];
 	$post = json_encode($data);
 	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' .$Accesstoken);//$access_token
-			
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -110,6 +100,6 @@ if (!is_null($StrGet)) {
 	echo $result . "\r\n";	
 	echo $StrGet;
 }
-//echo $HerokuMsg;
+echo "TEST lottery";
 
 ?>
