@@ -1,6 +1,7 @@
 <?php
 //include 'headbot.php';
 // Function Return message
+function send_LINELottery(){
 function t1($tt1)
 {
 	$messages = [
@@ -43,5 +44,6 @@ if (!is_null($StrGet)) {
 	curl_close($ch);
 	echo $result . "\r\n";	
 	echo $StrGet;
+}
 }
 ?>
