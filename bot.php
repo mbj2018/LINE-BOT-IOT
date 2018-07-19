@@ -53,7 +53,8 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
-			echo $post;
+			$strjson =Response.Write($post)
+			echo $strjson;
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
